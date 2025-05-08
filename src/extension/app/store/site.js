@@ -178,6 +178,23 @@ export class SiteStore {
   }
 
   /**
+   * Determines the domain based on the previewHost.
+   * @param {string} previewHost - The preview host URL.
+   * @returns {string} The domain string.
+   */
+  getDomain(previewHost) {
+    if (previewHost?.endsWith('.aem.page')) {
+      return 'aem';
+    } else if (previewHost?.endsWith('.adobems-aem.page')) {
+      return 'adobems-aem';
+    } else if (previewHost?.endsWith('.gov-aem.page')) {
+      return 'gov-aem';
+    } else {
+      return 'hlx';
+    }
+  }
+
+  /**
    * Set as initialized.
    */
   @action
@@ -253,7 +270,8 @@ export class SiteStore {
     } = config;
     const publicHost = host && host.startsWith('http') ? new URL(host).host : host;
     const hostPrefix = owner && repo ? `${ref}--${repo}--${owner}` : null;
-    const domain = previewHost?.endsWith('.aem.page') ? 'aem' : 'hlx';
+    // const domain = previewHost?.endsWith('.aem.page') ? 'aem' : 'hlx';
+    const domain = this.getDomain(previewHost);
     const stdInnerHost = hostPrefix ? `${hostPrefix}.${domain}.page` : null;
     const stdOuterHost = hostPrefix ? `${hostPrefix}.${domain}.live` : null;
     const stdReviewHost = hostPrefix ? `${hostPrefix}.aem.reviews` : null;

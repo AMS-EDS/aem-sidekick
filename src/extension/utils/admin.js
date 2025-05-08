@@ -22,8 +22,8 @@
  * The origin of the Admin API.
  * @type {string}
  */
-export const ADMIN_ORIGIN = 'https://admin.hlx.page';
-
+// export const ADMIN_ORIGIN = 'https://admin.hlx.page';
+export const ADMIN_ORIGIN = 'https://admin.adobems-aem.page';
 /**
  * Creates an Admin API URL for an API and path.
  * @param {AdminUrlConfig} config The sidekick config object

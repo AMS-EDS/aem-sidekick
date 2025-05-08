@@ -166,7 +166,8 @@ export async function getProjectFromUrl(tab) {
     try {
       // check if hlx.page, hlx.live, aem.page, aem.live or aem.reviews url
       const { host } = new URL(url);
-      const res = /(.*--)?(.*)--(.*)--(.*)\.(aem|hlx)\.(page|live|reviews)/.exec(host);
+      // const res = /(.*--)?(.*)--(.*)--(.*)\.(aem|hlx)\.(page|live|reviews)/.exec(host);
+      const res = /(.*--)?(.*)--(.*)--(.*)\.(aem|hlx|adobems-aem|gov-aem)\.(page|live|reviews)/.exec(host);
       const [,, urlRef, urlRepo, urlOwner] = res || [];
       if (urlOwner && urlRepo && urlRef) {
         return {
