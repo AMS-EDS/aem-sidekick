@@ -39,6 +39,11 @@ async function injectContentScript(tabId, matches, adminVersion) {
     });
   } catch (e) {
     log.warn('injectContentScript: unable to inject content script', tabId, e);
+    if (e.message && e.message.includes('No tab with id')) {
+      log.info(`injectContentScript: Tab with id ${tabId} no longer exists or is inaccessible for content script injection.`);
+    } else {
+      log.warn('injectContentScript: general error', tabId, e);
+    }
   }
 }
 
@@ -72,6 +77,12 @@ export async function checkTab(id) {
     });
   } catch (e) {
     log.warn(`checkTab: error checking tab ${id}`, e);
+    if (e.message && e.message.includes('No tab with id')) {
+      log.info(`checkTab: Tab with id ${id} no longer exists or is inaccessible.`);
+      updateUI(); // Ensure UI is updated if tab is gone
+    } else {
+      log.warn(`checkTab: general error for tab ${id}`, e);
+    }
   }
 }
 

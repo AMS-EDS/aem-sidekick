@@ -30,13 +30,21 @@ chrome.action.onClicked.addListener(async () => {
 
 chrome.tabs.onUpdated.addListener(async (id, info, tab) => {
   if (tab.active && info.status === 'complete') {
-    checkTab(id);
-    checkViewDocSource(id);
+    try {
+      await checkTab(id);
+      await checkViewDocSource(id);
+    } catch (error) {
+      log.error(`Error in onUpdated listener for tab ${id}:`, error);
+    }
   }
 });
 
-chrome.tabs.onActivated.addListener(({ tabId: id }) => {
-  checkTab(id);
+chrome.tabs.onActivated.addListener(async ({ tabId: id }) => {
+  try {
+    await checkTab(id);
+  } catch (error) {
+    log.error(`Error in onActivated listener for tab ${id}:`, error);
+  }
 });
 
 // external messaging API to execute actions
@@ -53,8 +61,15 @@ chrome.runtime.onMessageExternal.addListener(async (message, sender, sendRespons
 // If the state changes we need to call checkTab to update the extension UI.
 chrome.storage.onChanged.addListener(async (changes, storageArea) => {
   if (storageArea === 'local' && changes.display) {
-    const tab = await getCurrentTab();
-    await checkTab(tab.id);
+    try {
+      const tab = await getCurrentTab();
+      // It's possible the tab is undefined if no active tab in current window
+      if (tab && tab.id) {
+        await checkTab(tab.id);
+      }
+    } catch (error) {
+      log.error('Error in storage.onChanged listener:', error);
+    }
   }
 });
 
