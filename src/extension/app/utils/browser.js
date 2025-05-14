@@ -91,9 +91,9 @@ export function matchProjectHost(baseHost, host) {
     return true;
   }
   // check for matching domain suffixes
-  const previewSuffixes = ['.aem.page', '.hlx.page'];
+  const previewSuffixes = ['.aem.page', '.hlx.page', '.adobems-aem.page', '.gov-aem.page'];
   const reviewSuffix = '.aem.reviews';
-  const liveSuffixes = ['.aem.live', '.hlx.live'];
+  const liveSuffixes = ['.aem.live', '.hlx.live', '.adobems-aem.live', '.gov-aem.live'];
   const isPreview = previewSuffixes.some((suffix) => baseHost.endsWith(suffix))
       && previewSuffixes.some((suffix) => host.endsWith(suffix));
   const isLive = liveSuffixes.some((suffix) => baseHost.endsWith(suffix))
