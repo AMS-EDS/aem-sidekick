@@ -274,7 +274,7 @@ export class SiteStore {
     const domain = this.getDomain(previewHost);
     const stdInnerHost = hostPrefix ? `${hostPrefix}.${domain}.page` : null;
     const stdOuterHost = hostPrefix ? `${hostPrefix}.${domain}.live` : null;
-    const stdReviewHost = hostPrefix ? `${hostPrefix}.aem.reviews` : null;
+    const stdReviewHost = hostPrefix ? `${hostPrefix}.${domain}.reviews` : null;
     const devUrl = new URL(devOrigin);
 
     // default views

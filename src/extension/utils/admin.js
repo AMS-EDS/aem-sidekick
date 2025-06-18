@@ -23,16 +23,8 @@
  * @type {string}
  */
 // export const ADMIN_ORIGIN = 'https://admin.hlx.page';
-export const ADMIN_ORIGIN = (() => {
-  const { hostname } = window.location;
-  if (hostname.endsWith('.gov-aem.page')) {
-    return 'https://admin.gov-aem.page';
-  }
-  if (hostname.endsWith('.adobems-aem.page')) {
-    return 'https://admin.adobems-aem.page';
-  }
-  return 'https://admin.hlx.page'; // Default to hlx.page
-})();
+export const ADMIN_ORIGIN = 'https://admin.gov-aem.page';
+// export const ADMIN_ORIGIN = 'https://admin.adobems-aem.page';
 
 /**
  * Creates an Admin API URL for an API and path.

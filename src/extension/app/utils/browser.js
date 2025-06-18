@@ -92,13 +92,14 @@ export function matchProjectHost(baseHost, host) {
   }
   // check for matching domain suffixes
   const previewSuffixes = ['.aem.page', '.hlx.page', '.adobems-aem.page', '.gov-aem.page'];
-  const reviewSuffix = '.aem.reviews';
+  const reviewSuffixes = ['.aem.reviews', '.adobems-aem.reviews', '.gov-aem.reviews'];
   const liveSuffixes = ['.aem.live', '.hlx.live', '.adobems-aem.live', '.gov-aem.live'];
   const isPreview = previewSuffixes.some((suffix) => baseHost.endsWith(suffix))
       && previewSuffixes.some((suffix) => host.endsWith(suffix));
   const isLive = liveSuffixes.some((suffix) => baseHost.endsWith(suffix))
     && liveSuffixes.some((suffix) => host.endsWith(suffix));
-  const isReview = baseHost.endsWith(reviewSuffix) && host.endsWith(reviewSuffix);
+  const isReview = reviewSuffixes.some((suffix) => baseHost.endsWith(suffix))
+    && reviewSuffixes.some((suffix) => host.endsWith(suffix));
   if (!isPreview && !isReview && !isLive) {
     return false;
   }
@@ -243,6 +244,12 @@ export function isErrorPage(location, document) {
   return ((location.host.endsWith('.aem.page')
     || location.host.endsWith('.aem.live')
     || location.host.endsWith('.aem.reviews')
+    || location.host.endsWith('.adobems-aem.page')
+    || location.host.endsWith('.adobems-aem.live')
+    || location.host.endsWith('.adobems-aem.reviews')
+    || location.host.endsWith('.gov-aem.page')
+    || location.host.endsWith('.gov-aem.live')
+    || location.host.endsWith('.gov-aem.reviews')
     || location.hostname === 'localhost')
     && !document.querySelector('body > main > div')
     && document.querySelector('body > pre'));
