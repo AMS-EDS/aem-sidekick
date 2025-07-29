@@ -392,7 +392,7 @@ export function isValidHost(host, owner, repo) {
   const any = '([0-9a-z-]+)';
   return host.endsWith(first)
     && ['page', 'reviews', 'live'].includes(first)
-    && ['aem', 'hlx'].includes(second)
+    && ['aem', 'hlx', 'adobems-aem', 'gov-aem'].includes(second)
     && new RegExp(`--${repo || any}--${owner || any}$`, 'i').test(third);
 }
 
