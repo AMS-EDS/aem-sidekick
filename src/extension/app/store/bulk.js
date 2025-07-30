@@ -163,7 +163,9 @@ export class BulkStore {
         && !row.querySelector('svg')?.parentElement.className.toLowerCase().includes('folder'))
       // extract file name and type
       .map((row) => {
-        const info = row.getAttribute('aria-label') || row.querySelector('span')?.textContent;
+        const info = row.getAttribute('aria-label')
+          || row.querySelector('[data-automationid="field-LinkFilename"] span[role="button"]')?.textContent
+          || row.querySelector('span')?.textContent;
 
         // info format: bla.docx, docx File, Private, Modified 8/28/2023, edited by Jane, 1 KB
         let type = info.match(/, ([\p{L}\p{N}]+) [\p{L}\p{N}]+,/u)?.[1];
