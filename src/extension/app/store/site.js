@@ -190,7 +190,7 @@ export class SiteStore {
     } else if (previewHost?.endsWith('.gov-aem.page')) {
       return 'gov-aem';
     } else {
-      return 'hlx';
+      return 'gov-aem';
     }
   }
 
@@ -266,7 +266,7 @@ export class SiteStore {
       project = '',
       specialViews,
       transient = false,
-      scriptUrl = 'https://www.hlx.live/tools/sidekick/index.js',
+      scriptUrl = 'https://www.gov-aem.live/tools/sidekick/index.js',
     } = config;
     const publicHost = host && host.startsWith('http') ? new URL(host).host : host;
     const hostPrefix = owner && repo ? `${ref}--${repo}--${owner}` : null;

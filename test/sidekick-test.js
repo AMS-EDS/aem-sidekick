@@ -57,22 +57,22 @@ import { defaultOnboardingResponse, onboardingHtml } from './fixtures/onboarding
 /**
  * Status API
  */
-export const defaultStatusUrl = 'https://admin.hlx.page/status/adobe/aem-boilerplate/main/';
+export const defaultStatusUrl = 'https://admin.gov-aem.page/status/adobe/aem-boilerplate/main/';
 
 /**
  * Status editUrl API
  */
-export const defaultStatusEditUrl = 'glob:https://admin.hlx.page/status/adobe/aem-boilerplate/main?editUrl=*';
+export const defaultStatusEditUrl = 'glob:https://admin.gov-aem.page/status/adobe/aem-boilerplate/main?editUrl=*';
 
 /**
  * Profile API
  */
-export const defaultProfileUrl = 'https://admin.hlx.page/profile/adobe/aem-boilerplate/main';
+export const defaultProfileUrl = 'https://admin.gov-aem.page/profile/adobe/aem-boilerplate/main';
 
 /**
  * Sidekick Config API
  */
-export const defaultConfigJSONUrl = 'https://admin.hlx.page/sidekick/adobe/aem-boilerplate/main/config.json';
+export const defaultConfigJSONUrl = 'https://admin.gov-aem.page/sidekick/adobe/aem-boilerplate/main/config.json';
 
 export const defaultLocalConfigJSONUrl = 'http://localhost:3000/tools/sidekick/config.json';
 
@@ -530,7 +530,7 @@ export class SidekickTest {
    * @returns {SidekickTest}
    */
   mockFetchProfilePictureSuccess() {
-    fetchMock.get('https://admin.hlx.page/profile/adobe/aem-boilerplate/main/user-id/picture', {
+    fetchMock.get('https://admin.gov-aem.page/profile/adobe/aem-boilerplate/main/user-id/picture', {
       status: 200,
       body: new Blob(),
     }, { overwriteRoutes: true });

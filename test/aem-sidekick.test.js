@@ -30,7 +30,7 @@ import { SidekickTest } from './sidekick-test.js';
 // @ts-ignore
 window.chrome = chromeMock;
 
-describe('AEM Sidekick', () => {
+describe('AEM Sidekick - SSA', () => {
   /**
    * @type {SidekickTest}
    */
