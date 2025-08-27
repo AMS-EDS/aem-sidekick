@@ -38,7 +38,7 @@ export function mockDiscoveryCall({
   multipleOriginalSites = false,
 } = {}) {
   fetchMock.restore();
-  fetchMock.get('begin:https://admin.hlx.page/discover/', (url) => {
+  fetchMock.get('begin:https://admin.gov-aem.page/discover/', (url) => {
     if (failDiscovery) {
       return new Response('', { status: 404 });
     }

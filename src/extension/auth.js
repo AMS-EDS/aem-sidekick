@@ -62,7 +62,7 @@ export async function configureAuthAndCorsHeaders() {
           },
         });
 
-        const corsFilters = [`^https://[0-9a-z-]+--[0-9a-z-]+--${owner}.(aem|adobems-aem|gov-aem).(page|live|reviews)/.*`];
+        const corsFilters = [`^https://[0-9a-z-]+--[0-9a-z-]+--${owner}.gov-aem.(page|live|reviews)/.*`];
         const project = await getConfig('sync', `${owner}/${repo}`);
         if (project) {
           const { host, previewHost, liveHost } = project;
@@ -87,7 +87,7 @@ export async function configureAuthAndCorsHeaders() {
           },
           condition: {
             regexFilter,
-            initiatorDomains: ['tools.aem.live', 'labs.aem.live'],
+            initiatorDomains: ['tools.gov-aem.live', 'labs.gov-aem.live'],
             requestMethods: ['get'],
             resourceTypes: ['xmlhttprequest'],
           },
@@ -109,7 +109,7 @@ export async function configureAuthAndCorsHeaders() {
             }],
           },
           condition: {
-            regexFilter: `^https://[a-z0-9-]+--${repo}--${owner}.(aem|adobems-aem|gov-aem).(page|live|reviews)/.*`,
+            regexFilter: `^https://[a-z0-9-]+--${repo}--${owner}.gov-aem.(page|live|reviews)/.*`,
             requestMethods: ['get', 'post'],
             resourceTypes: [
               'main_frame',

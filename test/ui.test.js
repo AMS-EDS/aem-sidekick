@@ -33,7 +33,7 @@ const config = {
   ref: 'main',
   mountpoints: [],
 };
-const url = 'https://main--blog--adobe.hlx.page/';
+const url = 'https://main--blog--adobe.gov-aem.page/';
 const tab = {
   id: 1,
   url,
@@ -79,7 +79,7 @@ describe('Test UI: updateContextMenu', () => {
       menuItemId: 'openViewDocSource',
     }, {
       id: 1,
-      url: 'https://main--blog--adobe.hlx.page/',
+      url: 'https://main--blog--adobe.gov-aem.page/',
     });
     expect(openViewDocSourceStub.called).to.be.true;
   });
@@ -96,7 +96,7 @@ describe('Test UI: updateContextMenu', () => {
   });
 
   it('updateContextMenu: project added and enabled', async () => {
-    fetchMock.get('https://admin.hlx.page/sidekick/adobe/aem-boilerplate/main/config.json', {
+    fetchMock.get('https://admin.gov-aem.page/sidekick/adobe/aem-boilerplate/main/config.json', {
       status: 200,
       body: {
         version: 1,

@@ -272,7 +272,7 @@ export class SidekickTest {
     environment = HelixMockEnvironments.PREVIEW,
     contentType = HelixMockContentType.DOC,
     location = undefined,
-    sld = 'hlx',
+    sld = 'gov-aem',
   ) {
     mockHelixEnvironment(this.appStore, environment, contentType, location, sld);
     return this;

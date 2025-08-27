@@ -98,9 +98,9 @@ describe('Test auth', () => {
           },
           condition: {
             excludedInitiatorDomains: ['da.live'],
-            regexFilter: '^https://admin.hlx.page/(config/test.json|[a-z]+/test/.*)',
+            regexFilter: '^https://admin.gov-aem.page/(config/test.json|[a-z]+/test/.*)',
             requestDomains: [
-              'admin.hlx.page',
+              'admin.gov-aem.page',
             ],
             requestMethods: [
               'get',
@@ -126,10 +126,10 @@ describe('Test auth', () => {
             ],
           },
           condition: {
-            regexFilter: '^https://[0-9a-z-]+--[0-9a-z-]+--test.aem.(page|live|reviews)/.*',
+            regexFilter: '^https://[0-9a-z-]+--[0-9a-z-]+--test.gov-aem.(page|live|reviews)/.*',
             initiatorDomains: [
-              'tools.aem.live',
-              'labs.aem.live',
+              'tools.gov-aem.live',
+              'labs.gov-aem.live',
             ],
             requestMethods: [
               'get',
@@ -181,9 +181,9 @@ describe('Test auth', () => {
           },
           condition: {
             excludedInitiatorDomains: ['da.live'],
-            regexFilter: '^https://admin.hlx.page/(config/test.json|[a-z]+/test/.*)',
+            regexFilter: '^https://admin.gov-aem.page/(config/test.json|[a-z]+/test/.*)',
             requestDomains: [
-              'admin.hlx.page',
+              'admin.gov-aem.page',
             ],
             requestMethods: [
               'get',
@@ -209,10 +209,10 @@ describe('Test auth', () => {
             ],
           },
           condition: {
-            regexFilter: '^https://[0-9a-z-]+--[0-9a-z-]+--test.aem.(page|live|reviews)/.*',
+            regexFilter: '^https://[0-9a-z-]+--[0-9a-z-]+--test.gov-aem.(page|live|reviews)/.*',
             initiatorDomains: [
-              'tools.aem.live',
-              'labs.aem.live',
+              'tools.gov-aem.live',
+              'labs.gov-aem.live',
             ],
             requestMethods: [
               'get',
@@ -238,8 +238,8 @@ describe('Test auth', () => {
           condition: {
             regexFilter: '^https://production-host.com/.*',
             initiatorDomains: [
-              'tools.aem.live',
-              'labs.aem.live',
+              'tools.gov-aem.live',
+              'labs.gov-aem.live',
             ],
             requestMethods: [
               'get',
@@ -265,8 +265,8 @@ describe('Test auth', () => {
           condition: {
             regexFilter: '^https://custom-preview.com/.*',
             initiatorDomains: [
-              'tools.aem.live',
-              'labs.aem.live',
+              'tools.gov-aem.live',
+              'labs.gov-aem.live',
             ],
             requestMethods: [
               'get',
@@ -292,8 +292,8 @@ describe('Test auth', () => {
           condition: {
             regexFilter: '^https://custom-live.com/.*',
             initiatorDomains: [
-              'tools.aem.live',
-              'labs.aem.live',
+              'tools.gov-aem.live',
+              'labs.gov-aem.live',
             ],
             requestMethods: [
               'get',
@@ -339,9 +339,9 @@ describe('Test auth', () => {
           },
           condition: {
             excludedInitiatorDomains: ['da.live'],
-            regexFilter: '^https://admin.hlx.page/(config/test.json|[a-z]+/test/.*)',
+            regexFilter: '^https://admin.gov-aem.page/(config/test.json|[a-z]+/test/.*)',
             requestDomains: [
-              'admin.hlx.page',
+              'admin.gov-aem.page',
             ],
             requestMethods: [
               'get',
@@ -367,10 +367,10 @@ describe('Test auth', () => {
             ],
           },
           condition: {
-            regexFilter: '^https://[0-9a-z-]+--[0-9a-z-]+--test.aem.(page|live|reviews)/.*',
+            regexFilter: '^https://[0-9a-z-]+--[0-9a-z-]+--test.gov-aem.(page|live|reviews)/.*',
             initiatorDomains: [
-              'tools.aem.live',
-              'labs.aem.live',
+              'tools.gov-aem.live',
+              'labs.gov-aem.live',
             ],
             requestMethods: [
               'get',
@@ -394,7 +394,7 @@ describe('Test auth', () => {
             ],
           },
           condition: {
-            regexFilter: '^https://[a-z0-9-]+--site--test.aem.(page|live|reviews)/.*',
+            regexFilter: '^https://[a-z0-9-]+--site--test.gov-aem.(page|live|reviews)/.*',
             requestMethods: [
               'get',
               'post',

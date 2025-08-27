@@ -85,8 +85,8 @@ describe('Delete plugin', async () => {
     let appStore;
 
     const statusUrl = contentType === HelixMockContentType.SHEET
-      ? 'https://admin.hlx.page/status/adobe/aem-boilerplate/main/placeholders.json'
-      : 'https://admin.hlx.page/status/adobe/aem-boilerplate/main/';
+      ? 'https://admin.gov-aem.page/status/adobe/aem-boilerplate/main/placeholders.json'
+      : 'https://admin.gov-aem.page/status/adobe/aem-boilerplate/main/';
     let deleteStub;
     let reloadPageStub;
     let showModalSpy;
