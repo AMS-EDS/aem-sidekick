@@ -56,7 +56,7 @@ export const defaultConfigPlugins = {
       id: 'library',
       title: 'Library',
       environments: ['edit'],
-      url: 'https://main--aem-boilerplate--adobe.hlx.live/tools/sidekick/library.html',
+      url: 'https://main--aem-boilerplate--adobe.gov-aem.live/tools/sidekick/library.html',
       includePaths: ['**.docx**'],
       passConfig: true,
       passReferrer: true,
@@ -71,7 +71,7 @@ export const defaultConfigPlugins = {
       title: 'Tag Selector',
       id: 'tag-selector',
       environments: ['edit'],
-      url: 'https://main--aem-boilerplate--adobe.hlx.live/tools/tagger',
+      url: 'https://main--aem-boilerplate--adobe.gov-aem.live/tools/tagger',
       isPalette: true,
       paletteRect: 'top: 150px; left: 7%; height: 675px; width: 85vw;',
     },
@@ -197,7 +197,7 @@ export const defaultSharepointStatusResponse = {
   webPath: '/',
   resourcePath: '/index.md',
   live: {
-    url: 'https://main--aem-boilerplate--adobe.hlx.live/',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.live/',
     status: 200,
     contentBusId: 'helix-content-bus/content-bus-id/live/index.md',
     contentType: 'text/plain; charset=utf-8',
@@ -210,7 +210,7 @@ export const defaultSharepointStatusResponse = {
     ],
   },
   preview: {
-    url: 'https://main--aem-boilerplate--adobe.hlx.page/',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.page/',
     status: 200,
     contentBusId: 'helix-content-bus/content-bus-id/preview/index.md',
     contentType: 'text/plain; charset=utf-8',
@@ -232,10 +232,10 @@ export const defaultSharepointStatusResponse = {
     ],
   },
   links: {
-    status: 'https://admin.hlx.page/status/adobe/aem-boilerplate/main/',
-    preview: 'https://admin.hlx.page/preview/adobe/aem-boilerplate/main/',
-    live: 'https://admin.hlx.page/live/adobe/aem-boilerplate/main/',
-    code: 'https://admin.hlx.page/code/adobe/aem-boilerplate/main/',
+    status: 'https://admin.gov-aem.page/status/adobe/aem-boilerplate/main/',
+    preview: 'https://admin.gov-aem.page/preview/adobe/aem-boilerplate/main/',
+    live: 'https://admin.gov-aem.page/live/adobe/aem-boilerplate/main/',
+    code: 'https://admin.gov-aem.page/code/adobe/aem-boilerplate/main/',
   },
 };
 
@@ -243,7 +243,7 @@ export const defaultSharepointSheetStatusResponse = {
   webPath: '/placeholders.json',
   resourcePath: '/placeholders.json',
   live: {
-    url: 'https://main--aem-boilerplate--adobe.hlx.live/placeholders.json',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.live/placeholders.json',
     status: 200,
     contentBusId: 'helix-content-bus/content-bus-id/live/placeholders.json',
     contentType: 'text/plain; charset=utf-8',
@@ -256,7 +256,7 @@ export const defaultSharepointSheetStatusResponse = {
     ],
   },
   preview: {
-    url: 'https://main--aem-boilerplate--adobe.hlx.page/placeholders.json',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.page/placeholders.json',
     status: 200,
     contentBusId: 'helix-content-bus/content-bus-id/preview/placeholders.json',
     contentType: 'text/plain; charset=utf-8',
@@ -278,10 +278,10 @@ export const defaultSharepointSheetStatusResponse = {
     ],
   },
   links: {
-    status: 'https://admin.hlx.page/status/adobe/aem-boilerplate/main/placeholders.json',
-    preview: 'https://admin.hlx.page/preview/adobe/aem-boilerplate/main/placeholders.json',
-    live: 'https://admin.hlx.page/live/adobe/aem-boilerplate/main/placeholders.json',
-    code: 'https://admin.hlx.page/code/adobe/aem-boilerplate/main/placeholders.json',
+    status: 'https://admin.gov-aem.page/status/adobe/aem-boilerplate/main/placeholders.json',
+    preview: 'https://admin.gov-aem.page/preview/adobe/aem-boilerplate/main/placeholders.json',
+    live: 'https://admin.gov-aem.page/live/adobe/aem-boilerplate/main/placeholders.json',
+    code: 'https://admin.gov-aem.page/code/adobe/aem-boilerplate/main/placeholders.json',
   },
 };
 
@@ -306,7 +306,7 @@ export const defaultGdriveStatusResponse = {
   webPath: '/',
   resourcePath: '/index.md',
   live: {
-    url: 'https://main--aem-boilerplate--adobe.hlx.live/',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.live/',
     status: 200,
     contentBusId: 'helix-content-bus/content-bus-id/live/index.md',
     contentType: 'text/plain; charset=utf-8',
@@ -319,7 +319,7 @@ export const defaultGdriveStatusResponse = {
     ],
   },
   preview: {
-    url: 'https://main--aem-boilerplate--adobe.hlx.page/',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.page/',
     status: 200,
     contentBusId: 'helix-content-bus/content-bus-id/preview/index.md',
     contentType: 'text/plain; charset=utf-8',
@@ -341,10 +341,10 @@ export const defaultGdriveStatusResponse = {
     ],
   },
   links: {
-    status: 'https://admin.hlx.page/status/adobe/aem-boilerplate/main/',
-    preview: 'https://admin.hlx.page/preview/adobe/aem-boilerplate/main/',
-    live: 'https://admin.hlx.page/live/adobe/aem-boilerplate/main/',
-    code: 'https://admin.hlx.page/code/adobe/aem-boilerplate/main/',
+    status: 'https://admin.gov-aem.page/status/adobe/aem-boilerplate/main/',
+    preview: 'https://admin.gov-aem.page/preview/adobe/aem-boilerplate/main/',
+    live: 'https://admin.gov-aem.page/live/adobe/aem-boilerplate/main/',
+    code: 'https://admin.gov-aem.page/code/adobe/aem-boilerplate/main/',
   },
 };
 
@@ -391,12 +391,12 @@ export const defaultStatusLoggedInNotAuthorizedResponse = {
   resourcePath: '/index.md',
   live: {
     status: 403,
-    url: 'https://main--aem-boilerplate--adobe.hlx.live/',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.live/',
     error: 'forbidden',
   },
   preview: {
     status: 403,
-    url: 'https://main--aem-boilerplate--adobe.hlx.page/',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.page/',
     error: 'forbidden',
   },
   edit: {
@@ -406,11 +406,11 @@ export const defaultStatusLoggedInNotAuthorizedResponse = {
     status: 403,
   },
   links: {
-    status: 'https://admin.hlx.page/status/adobe/aem-boilerplate/main/',
-    preview: 'https://admin.hlx.page/preview/adobe/aem-boilerplate/main/',
-    live: 'https://admin.hlx.page/live/adobe/aem-boilerplate/main/',
-    code: 'https://admin.hlx.page/code/adobe/aem-boilerplate/main/',
-    logout: 'https://admin.hlx.page/logout/adobe/aem-boilerplate/main',
+    status: 'https://admin.gov-aem.page/status/adobe/aem-boilerplate/main/',
+    preview: 'https://admin.gov-aem.page/preview/adobe/aem-boilerplate/main/',
+    live: 'https://admin.gov-aem.page/live/adobe/aem-boilerplate/main/',
+    code: 'https://admin.gov-aem.page/code/adobe/aem-boilerplate/main/',
+    logout: 'https://admin.gov-aem.page/logout/adobe/aem-boilerplate/main',
   },
   profile: {
     iss: 'https://accounts.google.com',
@@ -451,7 +451,7 @@ export const defaultGdriveProfileResponse = {
     hlx_hash: 'hash',
   },
   links: {
-    logout: 'https://admin.hlx.page/logout/adobe/aem-boilerplate/main',
+    logout: 'https://admin.gov-aem.page/logout/adobe/aem-boilerplate/main',
   },
 };
 
@@ -477,10 +477,10 @@ export const defaultSharepointProfileResponse = {
     ver: '2.0',
     ttl: 3349,
     hlx_hash: 'hash',
-    picture: 'https://admin.hlx.page/profile/adobe/aem-boilerplate/main/user-id/picture',
+    picture: 'https://admin.gov-aem.page/profile/adobe/aem-boilerplate/main/user-id/picture',
   },
   links: {
-    logout: 'https://admin.hlx.page/logout/adobe/aem-boilerplate/main',
+    logout: 'https://admin.gov-aem.page/logout/adobe/aem-boilerplate/main',
   },
 };
 
@@ -488,7 +488,7 @@ export const defaultDirectorySharepointStatusResponse = {
   webPath: '/',
   resourcePath: '/',
   live: {
-    url: 'https://main--aem-boilerplate--adobe.hlx.live/',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.live/',
     status: 404,
     contentBusId: 'helix-content-bus/content-bus-id/live/',
     permissions: [
@@ -497,7 +497,7 @@ export const defaultDirectorySharepointStatusResponse = {
     ],
   },
   preview: {
-    url: 'https://main--aem-boilerplate--adobe.hlx.page/',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.page/',
     status: 404,
     contentBusId: 'helix-content-bus/content-bus-id/preview/',
     permissions: [
@@ -523,10 +523,10 @@ export const defaultDirectorySharepointStatusResponse = {
     ],
   },
   links: {
-    status: 'https://admin.hlx.page/status/adobe/aem-boilerplate/main/',
-    preview: 'https://admin.hlx.page/preview/adobe/aem-boilerplate/main/',
-    live: 'https://admin.hlx.page/live/adobe/aem-boilerplate/main/',
-    code: 'https://admin.hlx.page/code/adobe/aem-boilerplate/main/',
+    status: 'https://admin.gov-aem.page/status/adobe/aem-boilerplate/main/',
+    preview: 'https://admin.gov-aem.page/preview/adobe/aem-boilerplate/main/',
+    live: 'https://admin.gov-aem.page/live/adobe/aem-boilerplate/main/',
+    code: 'https://admin.gov-aem.page/code/adobe/aem-boilerplate/main/',
   },
 };
 
@@ -534,7 +534,7 @@ export const defaultDirectoryGdriveStatusResponse = {
   webPath: '/',
   resourcePath: '/',
   live: {
-    url: 'https://main--aem-boilerplate--adobe.hlx.live/',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.live/',
     status: 404,
     contentBusId: 'helix-content-bus/content-bus-id/live/',
     permissions: [
@@ -543,7 +543,7 @@ export const defaultDirectoryGdriveStatusResponse = {
     ],
   },
   preview: {
-    url: 'https://main--aem-boilerplate--adobe.hlx.page/',
+    url: 'https://main--aem-boilerplate--adobe.gov-aem.page/',
     status: 404,
     contentBusId: 'helix-content-bus/content-bus-id/preview/',
     permissions: [
@@ -569,10 +569,10 @@ export const defaultDirectoryGdriveStatusResponse = {
     ],
   },
   links: {
-    status: 'https://admin.hlx.page/status/adobe/aem-boilerplate/main/',
-    preview: 'https://admin.hlx.page/preview/adobe/aem-boilerplate/main/',
-    live: 'https://admin.hlx.page/live/adobe/aem-boilerplate/main/',
-    code: 'https://admin.hlx.page/code/adobe/aem-boilerplate/main/',
+    status: 'https://admin.gov-aem.page/status/adobe/aem-boilerplate/main/',
+    preview: 'https://admin.gov-aem.page/preview/adobe/aem-boilerplate/main/',
+    live: 'https://admin.gov-aem.page/live/adobe/aem-boilerplate/main/',
+    code: 'https://admin.gov-aem.page/code/adobe/aem-boilerplate/main/',
   },
 };
 

@@ -30,7 +30,7 @@ import { SidekickTest } from './sidekick-test.js';
 // @ts-ignore
 window.chrome = chromeMock;
 
-describe('AEM Sidekick', () => {
+describe('AEM Sidekick - SSA', () => {
   /**
    * @type {SidekickTest}
    */
@@ -67,7 +67,7 @@ describe('AEM Sidekick', () => {
     expect(spTheme).to.exist;
 
     const { location } = sidekick;
-    expect(location.href).to.eq('https://main--aem-boilerplate--adobe.hlx.page/');
+    expect(location.href).to.eq('https://main--aem-boilerplate--adobe.gov-aem.page/');
     expect(sidekickTest.rumStub.called).to.be.true;
     expect(sidekickTest.rumStub.calledWithMatch('click', {
       source: 'sidekick',

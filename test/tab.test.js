@@ -29,7 +29,7 @@ const TABS = {
   },
   1: {
     id: 1,
-    url: 'https://main--blog--adobe.hlx.page/',
+    url: 'https://main--blog--adobe.gov-aem.page/',
   },
   2: {
     id: 2,
@@ -140,7 +140,7 @@ describe('Test check-tab', () => {
     // add proxyUrl meta tag
     const proxyUrl = document.createElement('meta');
     proxyUrl.setAttribute('property', 'hlx:proxyUrl');
-    proxyUrl.setAttribute('content', 'https://main--bar--foo.hlx.page/');
+    proxyUrl.setAttribute('content', 'https://main--bar--foo.gov-aem.page/');
     window.document.head.append(proxyUrl);
 
     onMessageAddListenerStub.restore();

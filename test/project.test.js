@@ -350,14 +350,14 @@ describe('Test project', () => {
   });
 
   it('isValidHost', () => {
-    expect(isValidHost('https://main--bar--foo.hlx.page', 'foo', 'bar')).to.be.true;
+    expect(isValidHost('https://main--bar--foo.gov-aem.page', 'foo', 'bar')).to.be.true;
     expect(isValidHost('https://main--bar--foo.hlx.live', 'foo', 'bar')).to.be.true;
     expect(isValidHost('https://main--bar--foo.aem.page', 'foo', 'bar')).to.be.true;
     expect(isValidHost('https://main--bar--foo.aem.live', 'foo', 'bar')).to.be.true;
     expect(isValidHost('https://main--bar--fake.hlx.live', 'foo', 'bar')).to.be.false;
     expect(isValidHost('https://main--bar--foo.hlx.random', 'foo', 'bar')).to.be.false;
     // check without owner & repo
-    expect(isValidHost('https://main--bar--foo.hlx.page')).to.be.true;
+    expect(isValidHost('https://main--bar--foo.gov-aem.page')).to.be.true;
   });
 
   it('isValidProject', () => {
@@ -369,9 +369,9 @@ describe('Test project', () => {
 
   it('getProjectMatches', async () => {
     // match preview URL
-    expect((await getProjectMatches(CONFIGS, mockTab('https://main--bar1--foo.hlx.page/'))).length).to.equal(1);
+    expect((await getProjectMatches(CONFIGS, mockTab('https://main--bar1--foo.gov-aem.page/'))).length).to.equal(1);
     // match preview URL with any ref
-    expect((await getProjectMatches(CONFIGS, mockTab('https://baz--bar1--foo.hlx.page/'))).length).to.equal(1);
+    expect((await getProjectMatches(CONFIGS, mockTab('https://baz--bar1--foo.gov-aem.page/'))).length).to.equal(1);
     // match custom preview URL
     expect((await getProjectMatches(CONFIGS, mockTab('https://6-preview.foo.bar/'))).length).to.equal(1);
     // match live URL
@@ -480,7 +480,7 @@ describe('Test project', () => {
     });
 
     it('resolveProxyUrl: dev url', async () => {
-      const proxyUrl = 'https://main--bar--foo.hlx.page/';
+      const proxyUrl = 'https://main--bar--foo.gov-aem.page/';
       const tabUrl = 'http://localhost:3000/foo';
 
       // add proxyUrl meta tag
@@ -497,7 +497,7 @@ describe('Test project', () => {
     });
 
     it('resolveProxyUrl: non-dev url', async () => {
-      const tabUrl = 'https://main--bar--foo.hlx.page/';
+      const tabUrl = 'https://main--bar--foo.gov-aem.page/';
 
       tab = mockTab(tabUrl);
 

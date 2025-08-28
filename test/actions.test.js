@@ -76,7 +76,7 @@ describe('Test actions', () => {
       {
         owner, repo, authToken, exp,
       },
-      { tab: mockTab('https://admin.hlx.page/auth/test/project/main') },
+      { tab: mockTab('https://admin.gov-aem.page/auth/test/project/main') },
     );
     expect(set.called).to.be.true;
     expect(resp).to.equal('close');
@@ -96,7 +96,7 @@ describe('Test actions', () => {
       {
         owner, repo, authToken, exp,
       },
-      { tab: mockTab('https://admin.hlx.page/auth/test/project/main') },
+      { tab: mockTab('https://admin.gov-aem.page/auth/test/project/main') },
     );
     expect(resp).to.equal('invalid message');
     urlStub.restore();
@@ -105,7 +105,7 @@ describe('Test actions', () => {
     set.resetHistory();
     await externalActions.updateAuthToken(
       { owner, repo },
-      { tab: mockTab('https://admin.hlx.page/auth/test/project/main') },
+      { tab: mockTab('https://admin.gov-aem.page/auth/test/project/main') },
     );
     await externalActions.updateAuthToken(
       {
@@ -250,7 +250,7 @@ describe('Test actions', () => {
       listener({
         action: 'updateAuthToken',
       }, {
-        tab: mockTab('https://admin.hlx.page/login/foo/bar/main?extensionId=dummy', { id: 7 }),
+        tab: mockTab('https://admin.gov-aem.page/login/foo/bar/main?extensionId=dummy', { id: 7 }),
       }, () => {});
     });
     let resp;
@@ -262,7 +262,7 @@ describe('Test actions', () => {
     );
     expect(resp).to.be.true;
     expect(createTabStub.calledWith({
-      url: 'https://admin.hlx.page/login/foo/bar/main?extensionId=dummy',
+      url: 'https://admin.gov-aem.page/login/foo/bar/main?extensionId=dummy',
       openerTabId: 0,
       windowId: 0,
     })).to.be.true;
@@ -277,7 +277,7 @@ describe('Test actions', () => {
     );
     expect(resp).to.be.true;
     expect(createTabStub.calledWith({
-      url: 'https://admin.hlx.page/login/foo/bar/main?extensionId=dummy&selectAccount=true',
+      url: 'https://admin.gov-aem.page/login/foo/bar/main?extensionId=dummy&selectAccount=true',
       openerTabId: 0,
       windowId: 0,
     })).to.be.true;
@@ -301,7 +301,7 @@ describe('Test actions', () => {
       listener({
         action: 'somethingElse',
       }, {
-        tab: mockTab('https://admin.hlx.page/login/foo/bar/main?extensionId=dummy', { id: 8 }),
+        tab: mockTab('https://admin.gov-aem.page/login/foo/bar/main?extensionId=dummy', { id: 8 }),
       }, () => {});
     });
     resp = await externalActions.login(
@@ -316,7 +316,7 @@ describe('Test actions', () => {
     const remove = sandbox.spy(chrome.storage.sync, 'remove');
     const i18nSpy = sandbox.spy(chrome.i18n, 'getMessage');
     // add project
-    await internalActions.addRemoveProject(mockTab('https://main--bar--foo.hlx.page/', {
+    await internalActions.addRemoveProject(mockTab('https://main--bar--foo.gov-aem.page/', {
       id: 1,
     }));
     expect(set.calledWith({
@@ -335,7 +335,7 @@ describe('Test actions', () => {
     // remove project
     await internalActions.addRemoveProject({
       id: 2,
-      url: 'https://main--bar--foo.hlx.page/',
+      url: 'https://main--bar--foo.gov-aem.page/',
     });
     expect(set.calledWith(
       { projects: [] },
@@ -355,11 +355,11 @@ describe('Test actions', () => {
   it('internal: enableDisableProject', async () => {
     const set = sandbox.spy(chrome.storage.sync, 'set');
     // add project first
-    await internalActions.addRemoveProject(mockTab('https://main--bar--foo.hlx.page/', {
+    await internalActions.addRemoveProject(mockTab('https://main--bar--foo.gov-aem.page/', {
       id: 1,
     }));
     // disable project
-    await internalActions.enableDisableProject(mockTab('https://main--bar--foo.hlx.page/', {
+    await internalActions.enableDisableProject(mockTab('https://main--bar--foo.gov-aem.page/', {
       id: 1,
     }));
     expect(set.calledWith({
@@ -373,7 +373,7 @@ describe('Test actions', () => {
       },
     })).to.be.true;
     // enable project
-    await internalActions.enableDisableProject(mockTab('https://main--bar--foo.hlx.page/', {
+    await internalActions.enableDisableProject(mockTab('https://main--bar--foo.gov-aem.page/', {
       id: 2,
     }));
     expect(set.calledWith({
@@ -435,7 +435,7 @@ describe('Test actions', () => {
       mockLegacySidekickResponse([CONFIGS[0]]);
       sandbox.stub(chrome.storage.sync, 'get').resolves({ projects: [] });
 
-      await internalActions.importProjects(mockTab('https://main--bar--foo.hlx.page/', {
+      await internalActions.importProjects(mockTab('https://main--bar--foo.gov-aem.page/', {
         id: 2,
       }));
       expect(i18nSpy.calledWith('config_project_imported_single', '1')).to.be.true;
@@ -447,7 +447,7 @@ describe('Test actions', () => {
       mockLegacySidekickResponse(CONFIGS);
       sandbox.stub(chrome.storage.sync, 'get').resolves({ projects: [] });
 
-      await internalActions.importProjects(mockTab('https://main--bar--foo.hlx.page/', {
+      await internalActions.importProjects(mockTab('https://main--bar--foo.gov-aem.page/', {
         id: 2,
       }));
 
@@ -459,7 +459,7 @@ describe('Test actions', () => {
       mockLegacySidekickResponse([CONFIGS[1]]);
       sandbox.stub(chrome.storage.sync, 'get').resolves({ 'foo/bar2': CONFIGS[1] });
 
-      await internalActions.importProjects(mockTab('https://main--bar--foo.hlx.page/', {
+      await internalActions.importProjects(mockTab('https://main--bar--foo.gov-aem.page/', {
         id: 2,
       }));
 
